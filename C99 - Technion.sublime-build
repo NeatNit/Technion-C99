@@ -3,6 +3,9 @@
     "shell_cmd": "gcc $file_name -std=c99 -o $file_base_name.exe && $file_base_name.exe",
     "selector": "source.c",
     "file_patterns": ["*.c"],
+    "env": {
+        "PATH": "C:\\MinGW\\bin"
+    },
     "variants": [
 	    {
     		"name": "in.txt",
@@ -17,5 +20,5 @@
     		"shell_cmd": "gcc $file_name -std=c99 -o $file_base_name.exe && & echo in.txt: & type in.txt & echo ******** $file_base_name.exe < in.txt > out.txt & echo out.txt: &  type out.txt",
 	    }
 	]
-    
+
 }
