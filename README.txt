@@ -1,3 +1,11 @@
+חשוב!! כדי לקרוא את הקובץ הזה מימין לשמאל מומלץ להעתיר אותו לפנקס הרשימות
+(Notepad)
+וללחוץ על
+Alt + Right Shift
+
+אחרת הוא יהיה כמעט בלתי-קריא!
+
+
 הוראות התקנה ל-C99 ב-Sublime Text עבור מבוא למדעי המחשב בטכניון:
 1. להוריד ולהתקין Sublime Text כמובן מהאתר: https://www.sublimetext.com/
 2. להוריד ולהתקין https://osdn.net/dl/mingw/mingw-get-setup.exe - לא לשנות מיקום התקנה! יש גם לוודא שהאפשרות ל-graphical user interface מסומנת
