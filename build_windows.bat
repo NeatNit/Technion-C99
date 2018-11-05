@@ -48,6 +48,9 @@ IF /I [%2] EQU [Empty] (
     ECHO Testing program...
     ECHO.
 
+    SET _passed=0
+    SET _failed=0
+
     REM Find test files:
     FOR /R %%T IN (%~n1in*.txt) DO (
         SET _input=%%T
@@ -75,19 +78,28 @@ IF /I [%2] EQU [Empty] (
         IF EXIST !_expected! (
             REM Compare expected output and actual output
             FC /B !_expected! test_out.txt > NUL
-            IF !ERRORLEVEL! EQU 0 (ECHO TEST PASSED^^!) ELSE (
+            IF !ERRORLEVEL! EQU 0 (
+                SET _passed=1
+                ECHO TEST PASSED^^!
+            ) ELSE (
                 REM There is a difference.
+                SET _failed=1
                 ECHO.
                 ECHO.
                 ECHO TEST FAILED - output doesn't match^^!
                 FC /N !_expected! test_out.txt
-                IF !ERRORLEVEL! EQU 0 ECHO However, there is a missing or extra newline ^(\n^) at the end of the file^^!
+                IF !ERRORLEVEL! EQU 0 ECHO There is a missing or extra newline character ^(\n^) at the end of the file^^!
             )
 
-        ) ELSE ECHO Test file !_input! - corresponding output file missing: !_expected! not found
+        ) ELSE ECHO Expected output file not found: !_expected!
         ECHO.
         ECHO ------------
-
+        ECHO.
+    )
+    IF !_failed! EQU 1 (
+        IF !_passed! EQU 0 (ECHO ALL TESTS FAILED.) ELSE (ECHO SOME TESTS FAILED.)
+    ) ELSE (
+        IF !_passed! EQU 1 (ECHO ALL TESTS PASSED.) ELSE (ECHO NO TESTS FOUND.)
     )
 
 ) ELSE IF /I [%2] EQU [In]  (
