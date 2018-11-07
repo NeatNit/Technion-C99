@@ -13,7 +13,7 @@ Alt + Right Shift
 4. ללחוץ על: Installation -> Apply Changes
 5. לאפשר להתקנה להסתיים ולסגור את MinGW Installation Manager
 7. לפתוח Sublime Text, לבחור Preferences -> Browse packages כדי לפתוח את תיקיית התוספים
-8. לפתוח את התיקייה User שבפנים ולהעתיק לתוכה את הקובץ: C99 - Technion.sublime-build
+8. ליצור תיקייה בשם Technion C99 ולהעתיק לתוכה את הקובץ: C99 - Technion.sublime-build ואת build_windows.bat
 9. לפתוח קובץ קוד C כלשהו, ואז לבחור Tools -> Build System -> C99 - Technion
 
 זהו!
