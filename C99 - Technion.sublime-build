@@ -3,6 +3,9 @@
     "cmd": ["$packages\\Technion C99\\build_windows.bat", "$file_name"],
     "selector": "source.c",
     "file_patterns": ["*.c"],
+    "env": {	
+        "PATH": "C:\\MinGW\\bin"	
+    },
     "variants": [
         {
             "name": "Compile & Test",
