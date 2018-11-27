@@ -18,19 +18,7 @@
         {
             "name": "Compile & Run - Empty stdin",
             "cmd": ["$packages\\Technion C99\\build_windows.bat", "$file_name", "empty"]
-        },
-        {
-            "name": "Compile & Run - Empty stdin, out.txt",
-            "cmd": ["$packages\\Technion C99\\build_windows.bat", "$file_name", "emptyout", "out.txt"]
-        },
-	    {
-    		"name": "Compile & Run - in.txt",
-    		"cmd": ["$packages\\Technion C99\\build_windows.bat", "$file_name", "in", "in.txt"]
-	    },
-    	{
-    		"name": "Compile & Run - in.txt, out.txt",
-            "cmd": ["$packages\\Technion C99\\build_windows.bat", "$file_name", "inout", "in.txt", "out.txt"]
-	    }
+        }
 	]
     
 }
