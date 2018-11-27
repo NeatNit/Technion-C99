@@ -41,7 +41,7 @@ IF /I [%2] EQU [Empty] (
 
 ) ELSE IF /I [%2] EQU [Interactive] (
     ECHO Running program interactively in new window...
-    START /WAIT CMD /c "^"%~n1.exe^" & PAUSE"
+    START /WAIT CMD /c ""%~n1.exe" & PAUSE"
     ECHO Finished.
 
 ) ELSE IF /I [%2] EQU [Test] (
